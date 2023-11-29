@@ -8,9 +8,9 @@ session_start();
 
 <?php
 // Set session variables
-$_SESSION["favhouse"] = "villa s+3";
-$_SESSION["favlocation"] = "sousse";
-echo "Session variables are set.";
+$_SESSION["favhouse"] = " villa s+3";
+$_SESSION["favlocation"] = "  sousse";
+echo "my favorite is :";
 ?>
 <?php
 echo $_SESSION["favhouse"];
