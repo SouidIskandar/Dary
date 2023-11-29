@@ -98,7 +98,8 @@
                         <i class='bx bx-bath' ><span>2</span></i>
                     </div>
                 </div>
-            </div> <!--box3-->
+            </div>
+             <!--box3-->
             <div class="box">
                 <img src="m3.jpg" alt="" >
                 <h3>$12.999 </h3>
@@ -112,7 +113,8 @@
                         <i class='bx bx-bath' ><span>2</span></i>
                     </div>
                 </div>
-            </div> <!--box4-->
+            </div>
+             <!--box4-->
             <div class="box">
                 <img src="m4.jpg" alt="" >
                 <h3>$12.999 </h3>
@@ -126,7 +128,8 @@
                         <i class='bx bx-bath' ><span>2</span></i>
                     </div>
                 </div>
-            </div> <!--box5-->
+            </div> 
+            <!--box5-->
             <div class="box">
                 <img src="m5.jpg" alt="" >
                 <h3>$12.999 </h3>
@@ -140,7 +143,8 @@
                         <i class='bx bx-bath' ><span>2</span></i>
                     </div>
                 </div>
-            </div> <!--box6-->
+            </div> 
+            <!--box6-->
             <div class="box">
                 <img src="m6.jpg" alt="" >
                 <h3>$12.999 </h3>
@@ -156,6 +160,8 @@
                 </div>
             </div>
         </div>
+        
+
     </section>
     <section class="newsletter container">
         <h2>Have Question in mind ? <br>Let us help you </h2>
