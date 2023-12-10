@@ -92,6 +92,16 @@ padding: 20px 35px;
 .btn:hover{
     background: #3492fd;
 }
+.btnn{
+    padding: 8px 8px;
+    background: #192f6a;
+    color: var(--main-color);
+    border-radius: 5rem;
+    border-color: var(--main-color);
+}
+.btnn:hover{
+    background: #3492fd;
+}
 .home{
      margin-top: 5rem;
      background: url(pexels-ahmed-abdelaziz-453201.jpg);
@@ -321,6 +331,8 @@ padding: 20px 35px;
     grid-template-columns: 0.4fr 1fr;
     align-items: center;
     min-height: 100vh;
+    justify-content: center;
+    text-align: center;
 }
 .login-container{
     display: flex;
@@ -330,9 +342,11 @@ padding: 20px 35px;
 }
 .login-container h2{
     font-size: 1.4rem;
+    text-align: center;
 }
 .login-container p{
     font-size: 0.9rem;
+    text-align: center;
 }
 .login-container form{
     display: flex;
@@ -375,4 +389,8 @@ padding: 20px 35px;
     padding: 6px 10px;
     border-radius: 5rem;
     
+}
+.login-image{
+    width: 848px;
+    height: 848px;
 }
