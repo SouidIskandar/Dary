@@ -1,3 +1,36 @@
+<?php 
+session_start();
+include("./db-connect.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+
+$gmail = $_POST['email'];
+$password = $_POST['password'];
+
+if(!empty($gmail) && !empty($password) && !is_numeric($gmail))
+{
+   $query = "select * from signup where email = '$gmail' limit 1";
+   $result = mysqli_query($conn, $query);
+
+   if($result)
+   {
+   if($result && mysqli_num_rows($result) > 0)
+   {
+      $user_data = mysqli_fetch_assoc($result);
+
+      if($user_data['password'] == $password)
+      {
+         header("Location: index.php");
+         die;
+      }
+   }
+   }
+   echo"<script type='text/javascript'> alter('Successfully Register')</script>";
+}
+else echo "<script>alert('Error : Please fill all fields and use a valid email address');</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,21 +50,21 @@
       <div class="login-container">
          <h2>Connectez-vous </h2>
          <p>Connectez-vous avec vos données que vous avez renseignées lors de votre inscription</p>
-         <form action="">
-            <span>Enter your E-mail adress</span>
-            <input type="email" name="" id="" placeholder="yourmail@gmail.com" required>
-            <span>Enter your password</span>
-            <input type="password" name="" id="" placeholder="password" required>
-            <input type="submit" value="Log In" class="buttom">
-            <a href="#">Forget Password ?</a>
+         <form action="" method="POST">
+            <span>Entrer votre adresse E-mail</span>
+            <input type="email" name="email" id="" placeholder="yourmail@gmail.com" required>
+            <span>Entrer votre mot de passe</span>
+            <input type="password" name="password" id="" placeholder="password" required>
+            <input type="submit" value="Se connecter" class="buttom">
+            <a href="#">Mot de passe oublié ?</a>
          </form>
-         <a href="Sign-up.php" class="btn">Sign up now</a>
-        </div>
+         <a href="Sign-up.php" class="btn">S'inscrire</a>
+        
       
       <div class="login-image">
          <img src="image\login.png" alt="" class="imlog">
       </div>
-    </div>
+    </div></div>
 <?php include("./lib/footer.php") ?>
 
 

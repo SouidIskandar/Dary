@@ -1,4 +1,14 @@
-<?php $connect = mysqli_connect("localhost","root","","dary-bd");
+<?php include("./db-connect.php");
+   $search = '';
+   if (isset($_GET) && $_GET && $_GET['search']){
+       $search = $_GET['search'];
+       $sql = "SELECT * FROM `reservation` WHERE `titre` LIKE '%" . $_GET['search'] . "%' or `description` LIKE '%" . $_GET['search'] . "%';";
+   }else {
+       $sql = "SELECT * FROM `reservation`";
+   }
+
+   $result = $conn->query($sql);
+   $conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +23,18 @@
     <?php include("./lib/navbar.php") ?>
     <section class="properties container" id="properties">
         <div class="heading">
-            <span>Recent</span>
-            <h2>Our Featured Properties</h2>
-            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Quam, repudiandae!</p>
+            <h2>Récent</h2>
         </div>
-     
+        <div class="rech container">
+            <div class="rech-container">
+        <form >
+        <span>Recherche</span>
+        <input type="text" name="search" id="search" placeholder="Recherche" value="<?= $search ?>">
+        <input type="submit" value="Recherche" class="buttom"/>
+    </form>
+             </div>
+        </div>
+        
             <!--
             <div class="box">
                 <img src="m1.jpg" alt="" >
@@ -95,12 +112,10 @@
             </div> -->
           
 <div class="properties-container container">
-<?php
-
-$query = "SELECT * FROM reservation" ;
-$result = mysqli_query($connect,$query);
-while($row = mysqli_fetch_array($result))
-{?>
+<?php 
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) { ?>
    
             <div class="box">
                 <img src="<?= $row["image"] ?>" alt="" >
@@ -112,13 +127,17 @@ while($row = mysqli_fetch_array($result))
                     </div>
                     <div class="icon">
                         <i class='bx bx-bed' ><span>5</span></i>
-                        <i class='bx bx-bath' ><span>2</span></i>
+                        <i class='bx bx-bath'  ><span>2</span></i>
                     </div>
                 </div>
             </div>
         
-<?php }
-    ?>    </div>
+            <?php }
+            } else {
+                echo "0 results";
+            }
+        ?>
+          </div>
 
 
 

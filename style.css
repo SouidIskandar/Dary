@@ -88,20 +88,12 @@ padding: 20px 35px;
     background: var(--main-color);
     color: var(--bg-color);
     border-radius: 5rem;
+   
 }
 .btn:hover{
     background: #3492fd;
 }
-.btnn{
-    padding: 8px 8px;
-    background: #192f6a;
-    color: var(--main-color);
-    border-radius: 5rem;
-    border-color: var(--main-color);
-}
-.btnn:hover{
-    background: #3492fd;
-}
+
 .home{
      margin-top: 5rem;
      background: url(pexels-ahmed-abdelaziz-453201.jpg);
@@ -328,9 +320,9 @@ padding: 20px 35px;
 }
 .login{
     display: grid;
-    grid-template-columns: 0.4fr 1fr;
+    grid-template-columns: 0.4fr fr;
     align-items: center;
-    min-height: 100vh;
+    min-height: 130vh;
     justify-content: center;
     text-align: center;
 }
@@ -390,7 +382,44 @@ padding: 20px 35px;
     border-radius: 5rem;
     
 }
-.login-image{
-    width: 848px;
-    height: 848px;
+.rech{
+    display: grid;
+    grid-template-columns: 0.4fr 0.0fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+.rech-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+}
+.rech-container form{
+    display: flex;
+    flex-direction: column;
+}
+.rech-container form span{
+    font-size: 0.9rem;
+    color: #3492fd;
+    margin-bottom: 4px;
+}
+.rech-container form input{
+    border: 1px solid  #8a8a8a;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    padding: 6px 10px;
+    border-radius: 5rem;
+}
+.rech-container form .buttom{
+    outline: none;
+    border: none;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+

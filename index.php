@@ -1,3 +1,4 @@
+<?php include("./db-connect.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,7 @@
     <section class="home container" id="home">
         <div class="home-text">
             <h1>Trouvez votre prochain <br>endroit idéal où <br>vivre</h1>
-            <a href="#" class="btn">Réserver</a>
+            <a href="http://localhost/dary/catalogue.php" class="btn">Réserver</a>
         </div>
     </section>
     <section class="about container" id="Apropos">

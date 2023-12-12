@@ -9,5 +9,7 @@
                 <li><a href="http://localhost/dary/catalogue.php">catalogue</a></li>
             </ul>
             <a href="login.php" class="btn">Se connecter</a>
-            <a href="Sign-up.php" class="btnn">S'inscrire <i class='bx bx-user' ></i></a>
         </div>
+
+
+    
