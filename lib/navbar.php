@@ -5,7 +5,7 @@
             <ul class="navbar">
                 <li><a href="http://localhost/dary/index.php">Accueil</a></li>
                 <li><a href="http://localhost/dary/index.php#Apropos">A propos</a></li>
-                <li><a href="http://localhost/dary/index.php#contact">Contact</a></li>
+                <li><a href="http://localhost/dary/contact.php">Contact</a></li>
                 <li><a href="http://localhost/dary/catalogue.php">catalogue</a></li>
             </ul>
             <a href="login.php" class="btn">Se connecter</a>
