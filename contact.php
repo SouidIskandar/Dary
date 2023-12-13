@@ -1,3 +1,19 @@
+<?php
+    if (isset($_POST) && $_POST){
+        include_once("db-connect.php");
+
+        $sql = "INSERT INTO `contact` (`email`, `message`) 
+        VALUES ('" . $_POST['email'] . "', '" . $_POST['message'] . "');";
+    
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        
+        $conn->close();
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
